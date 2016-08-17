@@ -36,10 +36,11 @@ router.use(function(req, res, next) {
 
 // REGISTER OUR ROUTES -------------------------------
 
-require('./app/routes')(router);
+require('./app/routes/comment')(router);
 app.use('/api', router); 
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res) 
+{
     res.json({ message: 'Routes are working' });   
 });
 
