@@ -3,8 +3,8 @@
 Under development will mainly use the MEAN stack and hope to be able to create all code in JavaScript.
 
 ##Installation
-npm install
-npm install -g grunt-cli
+1 npm install
+2 npm install -g grunt-cli
 
 
 ##Plan
