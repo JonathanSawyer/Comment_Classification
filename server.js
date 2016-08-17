@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // set the static files location /public/img will be /img for users
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + '/angular_ui')); 
 
 
 var port = process.env.PORT || 8080;        // set our port
@@ -36,7 +36,7 @@ router.use(function(req, res, next) {
 
 // REGISTER OUR ROUTES -------------------------------
 
-require('./app/routes/comment')(router);
+require('./node_server/routes/comment')(router);
 app.use('/api', router); 
 
 router.get('/', function(req, res) 
