@@ -6,7 +6,8 @@ Under development will mainly use the MEAN stack and hope to be able to create a
 1. You will need Node.js, NPM and Bower installed
 
 ##Install Dependencies
-Run the following commands on the command line from the root of the application.
+From the root of the app run the following commands.
+
 1. run `npm install`
 2. run `bower install`
 3. `npm install -g grunt-cli`
