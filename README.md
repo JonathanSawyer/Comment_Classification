@@ -6,6 +6,7 @@ Under development will mainly use the MEAN stack and hope to be able to create a
 1. You will need `Node.js`, `NPM` and `Bower` installed
 2. `npm install -g grunt-cli`
 3. `npm install -g nodemon`
+4. `npm install -g karma-cli`
 
 ##Install Dependencies
 From the root of the app run the following commands.
