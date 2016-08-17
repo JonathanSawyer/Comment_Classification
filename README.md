@@ -13,7 +13,7 @@ From the root of the app run the following commands.
 3. `npm install -g grunt-cli`
 
 ##Running Application
-1. Run `node server.js`
+1. `node server.js`
 2. navigate to `http://localhost:8080/`
 
 ##Plan
