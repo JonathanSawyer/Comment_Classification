@@ -15,6 +15,12 @@
     "grunt-contrib-watch": "latest"
   },
   "devDependencies": {
-    "grunt-nodemon": "^0.4.2"
+    "angular-mocks": "^1.5.8",
+    "grunt-nodemon": "^0.4.2",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26"
   }
 }
