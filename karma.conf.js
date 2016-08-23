@@ -18,11 +18,14 @@ module.exports = function(config) {
     [
       './UI/libs/angular/angular.js',      
       './UI/libs/angular-route/angular-route.min.js', 
-      './node_modules/angular-mocks/angular-mocks.js',   
-      './UI/js/services/CommentService.js',              
-      './UI/js/app.js',                                  
-      './UI/js/services/CommentService.spec.js'  
-    ],
+      './node_modules/angular-mocks/angular-mocks.js',
+      './UI/app.js',      
+      './UI/services/CommentService.js',      
+      './UI/controllers/CommentController.js',       
+      './UI/appRoutes.js',                                             
+      './UI/tests/services/CommentService.spec.js',  
+      './UI/tests/controllers/CommentController.spec.js'  
+    ], 
 
 
     // list of files to exclude

@@ -4,17 +4,17 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
 		// home page
 		.when('/', {
-			templateUrl: 'views/home.html',
+			templateUrl: 'views/home/index.html',
 			controller: 'MainController'
 		})
 
 		.when('/comments', {
-			templateUrl: 'views/comment.html',
+			templateUrl: 'views/comment/index.html',
 			controller: 'CommentController'
 		})
 
 		.when('/sentimentanalysis', {
-			templateUrl: 'views/sentiment.html',
+			templateUrl: 'views/sentiment/index.html',
 			controller: 'SentimentController'	
 		});
 
