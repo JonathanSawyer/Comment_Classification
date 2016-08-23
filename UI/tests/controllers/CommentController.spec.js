@@ -6,10 +6,9 @@
             module('app.service');
         });
 
-        var scope, ctrl, commentService, q, deferred;
-        beforeEach(inject(function($rootScope, $controller, $q) 
+        var scope, ctrl, commentService;
+        beforeEach(inject(function($rootScope, $controller) 
         {
-            q = $q;
             commentService = 
             {
                 create : jasmine.createSpy(),

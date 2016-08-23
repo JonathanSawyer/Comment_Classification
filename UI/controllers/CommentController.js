@@ -7,7 +7,9 @@ angular.module('app.controllers').controller('CommentController', ['$scope', 'Co
 
     $scope.create = function()
     {
+        $scope.comments.push($scope.comment);
         $scope.commentService.create($scope.comment);
+        $scope.comment = {};
     };
 
     $scope.update = function(id)
@@ -24,7 +26,7 @@ angular.module('app.controllers').controller('CommentController', ['$scope', 'Co
     {
         $scope.commentService.list().then(function (comments)
         {
-            $scope.comments = comments;
+            $scope.comments = comments.data;
         });
     }
 
@@ -32,4 +34,7 @@ angular.module('app.controllers').controller('CommentController', ['$scope', 'Co
     {
         $scope.comment = $scope.commentService.get(id);
     }
+
+    $scope.list();
+
 }]);
