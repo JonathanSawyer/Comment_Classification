@@ -19,9 +19,9 @@ angular.module('app.service').factory('CommentService', ['$http', function($http
     };
 
     Comment.create = function (comment) {
-        return $http.post("../api/comments", comment).then(function ()
+        return $http.post("../api/comments", comment).then(function (response)
         {
-            return "created";
+            return response;
         });
     };
 

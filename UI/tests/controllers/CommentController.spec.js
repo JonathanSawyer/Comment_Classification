@@ -18,7 +18,18 @@
                 get    : {}
             };
 
-            scope  = $rootScope.$new();
+            spyOn(commentService, 'list').and.callFake(function() {
+                return {
+                    then: function(callback) { return callback(
+                        {
+                           data : [{name : "HangukMal Babo"}]
+                        }
+                        ); 
+                    }
+                };
+            });
+
+            scope          = $rootScope.$new();
             ctrl   = $controller('CommentController', 
             {
                 $scope         : scope,
@@ -28,6 +39,7 @@
         
         it('#create', function() 
         {
+            scope.comments = [];
             scope.create();
             expect(commentService.create).toHaveBeenCalledWith(scope.comment);
         });
@@ -46,14 +58,11 @@
 
         it('#list', function() 
         {
-            spyOn(commentService, 'list').and.callFake(function() {
-                return {
-                    then: function(callback) { return callback([{name : "HangukMal Babo"}]); }
-                };
-            });
             scope.list();
             expect(commentService.list).toHaveBeenCalled();
-            expect(scope.comments).toEqual([{name : "HangukMal Babo"}]);
+            expect(scope.comments).toEqual(
+                [{name : "HangukMal Babo"}]
+                );
         });
 
         it('#get', function() 
