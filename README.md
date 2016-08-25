@@ -1,6 +1,8 @@
 # Sentiment Analysis
 
-Under development will mainly use the MEAN stack and hope to be able to create all code in JavaScript. The tool will take comments about something and classify the overall sentiment towards it using the topic modeling algorithm Latent Dirichlet Allocation https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation.
+Very much under construction.
+
+The tool will take comments about something and classify the overall sentiment towards it using the topic modeling algorithm Latent Dirichlet Allocation https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation.
 
 ##Prerequisites
 1. You will need `Node.js`, `NPM` and `Bower` installed
