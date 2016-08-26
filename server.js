@@ -14,9 +14,8 @@ var bodyParser = require('body-parser');
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(bodyParser.json()); 
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
+app.use(bodyParser.json()); 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true })); 
 
 
 // set the static files location /public/img will be /img for users

@@ -5,9 +5,9 @@ module.exports = function(app)
 
     app.route('/comments')
         .post(function(req, res) {
+            console.log(req.body);
             var comment = new Comment();  
             comment.name = req.body.name;  
-            console.log(req.body.name);
             comment.save(function(err) {
                 if (err)
                     res.send(err);
