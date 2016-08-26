@@ -52,7 +52,9 @@
 
         it('#delete', function() 
         {
-            scope.delete(-1);
+            scope.comments = [];
+            scope.comments.push({_id : -1});
+            scope.delete(0);
             expect(commentService.delete).toHaveBeenCalledWith(-1);
         });
 

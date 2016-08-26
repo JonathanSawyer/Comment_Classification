@@ -5,8 +5,7 @@ module.exports = function(app)
 
     app.route('/comments')
         .post(function(req, res) {
-            
-            var comment = new Comment();      
+            var comment = new Comment();  
             comment.name = req.body.name;  
             console.log(req.body.name);
             comment.save(function(err) {
@@ -17,7 +16,6 @@ module.exports = function(app)
             });
             
         })
-
         .get(function(req, res) {
             Comment.find(function(err, comments) {
                 if (err)

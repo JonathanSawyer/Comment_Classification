@@ -4,12 +4,11 @@ angular.module('app.controllers').controller('CommentController', ['$scope', 'Co
     $scope.comment  = {}
     $scope.comments = [];
     
-
     $scope.create = function()
     {
         $scope.comments.push($scope.comment);
         $scope.commentService.create($scope.comment);
-        $scope.comment = {};
+        // $scope.comment = {};
     };
 
     $scope.update = function(id)
@@ -17,9 +16,10 @@ angular.module('app.controllers').controller('CommentController', ['$scope', 'Co
         $scope.commentService.update(id, $scope.comment);
     }
 
-    $scope.delete = function(id)
+    $scope.delete = function($index)
     {
-        $scope.commentService.delete(id);
+        $scope.commentService.delete($scope.comments[$index]._id);
+        $scope.comments.splice($index, 1);
     }
 
     $scope.list = function()
