@@ -45,7 +45,7 @@
             expect(succeeded).toBeTruthy();
         });
 
-         it('#list', function () 
+        it('#list', function () 
         {
             $httpBackend.expectGET('../api/comments').respond(200);
             var succeeded;

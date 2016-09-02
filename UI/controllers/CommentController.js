@@ -8,12 +8,12 @@ angular.module('app.controllers').controller('CommentController', ['$scope', 'Co
     {
         $scope.comments.push($scope.comment);
         $scope.commentService.create($scope.comment);
-        // $scope.comment = {};
+        $scope.comment = {};
     };
 
-    $scope.update = function(id)
+    $scope.update = function($index)
     {
-        $scope.commentService.update(id, $scope.comment);
+        $scope.commentService.update($scope.comments[$index]._id, $scope.comments[$index]);
     }
 
     $scope.delete = function($index)

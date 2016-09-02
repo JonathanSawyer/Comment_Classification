@@ -46,8 +46,10 @@
 
         it('#update', function() 
         {
-            scope.update(-1);
-            expect(commentService.update).toHaveBeenCalledWith(-1, scope.comment);
+            scope.comments = [];
+            scope.comments.push({_id : -1});
+            scope.update(0);
+            expect(commentService.update).toHaveBeenCalledWith(-1, scope.comments[0]);
         });
 
         it('#delete', function() 

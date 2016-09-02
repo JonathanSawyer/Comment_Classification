@@ -10,7 +10,7 @@ module.exports = function(app)
             comment.name = req.body.name;  
             comment.save(function(err) {
                 if (err)
-                    res.send(err);
+                    return res.send(err);
 
                 res.json({ message: 'Comment created!' });
             });
@@ -19,7 +19,7 @@ module.exports = function(app)
         .get(function(req, res) {
             Comment.find(function(err, comments) {
                 if (err)
-                    res.send(err);
+                    return res.send(err);
 
                 res.json(comments);
         });
@@ -28,7 +28,7 @@ module.exports = function(app)
         .get(function(req, res) {
             Comment.findById(req.params.comment_id, function(err, comment) {
                 if (err)
-                    res.send(err);
+                    return res.send(err);
                 res.json(comment);
             });
         })
@@ -38,7 +38,7 @@ module.exports = function(app)
                 _id: req.params.comment_id
             }, function(err, comment) {
                 if (err)
-                    res.send(err);
+                    return res.send(err);
 
                 res.json({ message: 'Successfully deleted' });
             });
@@ -49,13 +49,13 @@ module.exports = function(app)
             Comment.findById(req.params.comment_id, function(err, comment) {
 
                 if (err)
-                    res.send(err);
+                    return res.send(err);
 
                 comment.name = req.body.name;  
 
                 comment.save(function(err) {
                     if (err)
-                        res.send(err);
+                        return res.send(err);
 
                     res.json({ message: 'Comment updated!' });
                 });
